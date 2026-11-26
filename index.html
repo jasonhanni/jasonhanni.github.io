@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>18+网页_成人内容分级指南_深夜片单与观看策略</title>
+  <meta name="description" content="18+网页面向成年观众提供分级内容导航与观看决策参考，涵盖深夜片单、类型片对比、内容分级说明、用户评论与更新动态，适合需要筛选成人向视频的观众参考。">
+  <meta name="keywords" content="成人内容分级,深夜片单,类型片对比,观看指南,内容筛选">
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --surface: #14141c;
+      --surface-2: #1c1c28;
+      --border: #2a2a3a;
+      --text: #e8e8f0;
+      --muted: #9a9ab0;
+      --accent: #e63946;
+      --accent-2: #ff7a8a;
+      --gold: #e8b04b;
+      --radius: 10px;
+      --shadow: 0 8px 24px rgba(0,0,0,.45);
+      --sticky-h: 96px;
+      --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    h1, h2, h3, h4 { line-height: 1.3; margin: 0 0 .6em; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.35rem; border-left: 4px solid var(--accent); padding-left: 12px; margin-top: 2.2em; }
+    h3 { font-size: 1.08rem; color: var(--gold); margin-top: 1.6em; }
+    p { margin: 0 0 1em; }
+    ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
+    img { max-width: 100%; display: block; object-fit: cover; }
+    .wrap { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
+    .muted { color: var(--muted); }
+    .tag {
+      display: inline-block; font-size: .72rem; padding: 2px 8px;
+      border: 1px solid var(--border); border-radius: 999px; color: var(--muted);
+      margin: 0 4px 4px 0; white-space: nowrap;
+    }
+    .tag.hot { border-color: var(--accent); color: var(--accent-2); }
+
+    /* ===== 吸顶公告条 ===== */
+    .announce {
+      background: linear-gradient(90deg, #2a0a12, #3d0f1c);
+      color: #ffd9de;
+      font-size: .82rem;
+      padding: 9px 20px;
+      text-align: center;
+      border-bottom: 1px solid #4a1424;
+    }
+    .announce strong { color: var(--gold); }
+
+    /* ===== 吸顶页头 ===== */
+    .site-head {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11,11,15,.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .head-inner {
+      display: flex; align-items: center; gap: 22px;
+      max-width: 1320px; margin: 0 auto; padding: 12px 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 9px;
+      background: radial-gradient(circle at 30% 30%, var(--accent-2), #8a1220);
+      display: grid; place-items: center;
+      box-shadow: 0 0 0 2px #3a0c14, 0 0 18px rgba(230,57,70,.45);
+    }
+    .brand-mark svg { width: 22px; height: 22px; }
+    .brand-text { font-size: 1.12rem; font-weight: 700; letter-spacing: .5px; color: #fff; }
+    .brand-text span { color: var(--accent-2); }
+    .head-nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+    .head-nav a {
+      color: var(--muted); font-size: .88rem; padding: 6px 11px;
+      border-radius: 6px; white-space: nowrap;
+    }
+    .head-nav a:hover { background: var(--surface-2); color: var(--text); text-decoration: none; }
+    .head-cta {
+      background: var(--accent); color: #fff !important; font-weight: 600;
+      padding: 7px 16px !important; border-radius: 6px; font-size: .86rem;
+    }
+    .head-cta:hover { background: #c92b38 !important; text-decoration: none; }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(ellipse at 82% 18%, rgba(230,57,70,.22), transparent 55%),
+        radial-gradient(ellipse at 12% 90%, rgba(232,176,75,.10), transparent 55%),
+        var(--bg);
+      padding: 52px 0 44px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+      max-width: 1320px; margin: 0 auto; padding: 0 20px;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .76rem; letter-spacing: 2px; color: var(--accent-2);
+      border: 1px solid #4a1424; background: #1c0d12;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 18px;
+    }
+    .hero h1 { font-size: 2.5rem; letter-spacing: 1px; margin-bottom: .4em; }
+    .hero h1 em { font-style: normal; color: var(--accent-2); }
+    .hero-desc { font-size: 1rem; color: #c9c9dc; max-width: 34em; margin-bottom: 1.4em; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 1.6em; }
+    .btn {
+      display: inline-block; padding: 10px 22px; border-radius: 7px;
+      font-size: .9rem; font-weight: 600; border: 1px solid transparent; cursor: pointer;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: #c92b38; text-decoration: none; }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+    .btn-ghost:hover { border-color: var(--accent-2); text-decoration: none; }
+    .hero-stats { display: flex; gap: 26px; flex-wrap: wrap; }
+    .hero-stats div { font-size: .8rem; color: var(--muted); }
+    .hero-stats strong { display: block; font-size: 1.25rem; color: var(--text); }
+
+    .hero-visual {
+      position: relative; border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--border); box-shadow: var(--shadow);
+      background: var(--surface);
+      aspect-ratio: 4 / 3.4;
+      display: grid; place-items: center;
+    }
+    .hero-visual svg { width: 100%; height: 100%; display: block; }
+
+    /* ===== 主布局：三栏门户 ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 178px minmax(0, 1fr) 248px;
+      gap: 28px;
+      max-width: 1320px; margin: 0 auto; padding: 40px 20px 60px;
+      align-items: start;
+    }
+    .col-left { position: sticky; top: calc(var(--sticky-h) + 16px); }
+    .col-right { position: sticky; top: calc(var(--sticky-h) + 16px); }
+
+    .side-title {
+      font-size: .78rem; letter-spacing: 2px; color: var(--muted);
+      margin: 0 0 12px; text-transform: uppercase;
+    }
+    .channel-list { list-style: none; margin: 0 0 26px; padding: 0; }
+    .channel-list li { margin-bottom: 4px; }
+    .channel-list a {
+      display: flex; align-items: center; gap: 9px;
+      padding: 8px 10px; border-radius: 7px; color: var(--muted);
+      font-size: .9rem; border: 1px solid transparent;
+    }
+    .channel-list a:hover {
+      background: var(--surface-2); color: var(--text);
+      border-color: var(--border); text-decoration: none;
+    }
+    .channel-list .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .channel-list .dot.gold { background: var(--gold); }
+    .channel-list .dot.muted { background: #55556a; }
+
+    .side-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px; margin-bottom: 20px;
+    }
+    .side-card h3 { margin-top: 0; font-size: .92rem; color: var(--text); }
+    .side-card p { font-size: .82rem; color: var(--muted); margin-bottom: .6em; }
+
+    /* 热榜 */
+    .rank-list { list-style: none; margin: 0; padding: 0; counter-reset: r; }
+    .rank-list li {
+      counter-increment: r; display: flex; gap: 10px; align-items: baseline;
+      padding: 7px 0; border-bottom: 1px dashed var(--border); font-size: .85rem;
+    }
+    .rank-list li:last-child { border-bottom: 0; }
+    .rank-list li::before {
+      content: counter(r); font-weight: 700; color: var(--accent-2);
+      font-size: .8rem; width: 16px; flex-shrink: 0;
+    }
+    .rank-list a { color: var(--text); }
+    .rank-list .meta { display: block; color: var(--muted); font-size: .74rem; }
+
+    /* 主内容通用 */
+    .panel { margin-bottom: 48px; }
+    .panel-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .panel-head h2 { margin-top: 0; }
+    .panel-head .more { font-size: .82rem; color: var(--muted); }
+    .panel-lead { color: var(--muted); font-size: .9rem; margin-bottom: 20px; }
+
+    /* 概览 */
+    .overview p { color: #cfcfe0; }
+    .overview .callout {
+      border-left: 3px solid var(--gold); background: var(--surface);
+      padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: .9rem;
+      color: var(--muted); margin: 18px 0;
+    }
+
+    /* 搜索筛选 */
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;
+      align-items: center;
+    }
+    .filter-bar input[type="search"] {
+      flex: 1 1 220px; min-width: 160px; padding: 9px 14px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 7px; color: var(--text); font-size: .9rem; font-family: inherit;
+    }
+    .filter-bar input::placeholder { color: #6a6a80; }
+    .filter-chips { display: flex; gap: 7px; flex-wrap: wrap; }
+    .chip {
+      padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); font-size: .82rem; cursor: pointer;
+      font-family: inherit;
+    }
+    .chip:hover { border-color: var(--accent-2); color: var(--text); }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .empty-msg {
+      display: none; padding: 30px; text-align: center; color: var(--muted);
+      border: 1px dashed var(--border); border-radius: var(--radius);
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: border-color .2s, transform .2s;
+    }
+    .card:hover { border-color: #4a4a68; transform: translateY(-2px); }
+    .card img { aspect-ratio: 4/3; width: 100%; background: #20202e; }
+    .card-body { padding: 14px 15px 16px; display: flex; flex-direction: column; flex: 1; }
+    .card-body h3 { font-size: .98rem; color: var(--text); margin: 0 0 6px; }
+    .card-body .tags { margin-bottom: 8px; }
+    .card-body p { font-size: .82rem; color: var(--muted); margin-bottom: 10px; flex: 1; }
+    .card-meta {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: .74rem; color: var(--muted); border-top: 1px solid var(--border);
+      padding-top: 9px;
+    }
+    .score { color: var(--gold); font-weight: 700; }
+
+    /* 动态列表 */
+    .update-list { list-style: none; margin: 0; padding: 0; }
+    .update-list li {
+      display: grid; grid-template-columns: 66px 1fr; gap: 14px;
+      padding: 13px 0; border-bottom: 1px solid var(--border); font-size: .9rem;
+    }
+    .update-list li:last-child { border-bottom: 0; }
+    .update-list .time { color: var(--muted); font-size: .78rem; }
+    .update-list strong { color: var(--text); }
+
+    /* 分类入口 */
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+    .cat-item {
+      display: block; padding: 16px 14px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--text); font-weight: 600; font-size: .92rem;
+    }
+    .cat-item:hover { border-color: var(--accent); text-decoration: none; }
+    .cat-item span { display: block; color: var(--muted); font-size: .76rem; font-weight: 400; margin-top: 3px; }
+
+    /* 深度解析 */
+    .article { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 30px; }
+    .article h2 { margin-top: 0; }
+    .article h3 { margin-top: 1.8em; }
+    .article ul li { margin-bottom: .5em; }
+
+    /* 对照面板 */
+    .compare {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+      margin: 18px 0;
+    }
+    .compare > div { padding: 16px 18px; font-size: .86rem; }
+    .compare > div:first-child { background: var(--surface-2); border-right: 1px solid var(--border); }
+    .compare h4 { margin: 0 0 .5em; color: var(--gold); font-size: .92rem; }
+
+    /* 步骤 */
+    .steps { counter-reset: s; list-style: none; padding: 0; margin: 18px 0; }
+    .steps li {
+      counter-increment: s; position: relative; padding: 0 0 18px 46px;
+      border-left: 2px solid var(--border); margin-left: 14px;
+    }
+    .steps li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .steps li::before {
+      content: counter(s); position: absolute; left: -15px; top: 0;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent); color: #fff; font-weight: 700; font-size: .82rem;
+      display: grid; place-items: center;
+    }
+    .steps strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+    /* FAQ */
+    .faq details {
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--surface); margin-bottom: 10px; overflow: hidden;
+    }
+    .faq summary {
+      cursor: pointer; padding: 14px 18px; font-weight: 600; font-size: .92rem;
+      list-style: none; display: flex; justify-content: space-between; gap: 12px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; color: var(--accent-2); font-size: 1.1rem; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq .faq-body { padding: 0 18px 16px; color: var(--muted); font-size: .88rem; }
+
+    /* 评论 */
+    .comments { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .comment {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 9px; padding: 14px 16px; font-size: .86rem;
+    }
+    .comment .who {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 7px;
+      font-weight: 600; color: var(--accent-2); font-size: .82rem;
+    }
+    .avatar {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, #4a1424, #8a1220);
+      display: grid; place-items: center; color: #fff; font-size: .7rem; flex-shrink: 0;
+    }
+    .comment p { margin: 0; color: #c2c2d4; }
+    .comment .on { color: var(--muted); font-size: .74rem; margin-top: 6px; }
+
+    /* 资讯 */
+    .news-list { list-style: none; margin: 0; padding: 0; }
+    .news-list li {
+      display: grid; grid-template-columns: 96px 1fr; gap: 16px;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+    }
+    .news-list li:last-child { border-bottom: 0; }
+    .news-list img { width: 96px; height: 64px; border-radius: 6px; background: #20202e; }
+    .news-list h4 { margin: 0 0 4px; font-size: .92rem; }
+    .news-list .date { color: var(--muted); font-size: .74rem; }
+    .news-list p { margin: 4px 0 0; font-size: .8rem; color: var(--muted); }
+
+    /* 相关推荐标签 */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 9px; }
+    .tag-cloud a {
+      display: inline-block; padding: 8px 15px; border-radius: 7px;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); font-size: .85rem;
+    }
+    .tag-cloud a:hover { border-color: var(--accent-2); text-decoration: none; }
+
+    /* 时间线 */
+    .timeline { list-style: none; margin: 0; padding: 0; }
+    .timeline li {
+      position: relative; padding: 0 0 18px 22px; border-left: 1px solid var(--border);
+      margin-left: 5px; font-size: .88rem;
+    }
+    .timeline li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -5px; top: 6px;
+      width: 9px; height: 9px; border-radius: 50%; background: var(--gold);
+    }
+    .timeline .t-date { color: var(--muted); font-size: .76rem; }
+
+    /* 页尾 */
+    .site-foot {
+      border-top: 1px solid var(--border); background: #0a0a0e;
+      padding: 44px 0 30px; font-size: .85rem; color: var(--muted);
+    }
+    .foot-grid {
+      display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 30px;
+      max-width: 1320px; margin: 0 auto 26px; padding: 0 20px;
+    }
+    .foot-grid h4 { color: var(--text); font-size: .88rem; margin-bottom: .9em; }
+    .foot-grid ul { list-style: none; padding: 0; margin: 0; }
+    .foot-grid li { margin-bottom: .5em; }
+    .foot-grid a { color: var(--muted); }
+    .foot-grid a:hover { color: var(--text); }
+    .foot-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .foot-bottom {
+      border-top: 1px solid var(--border); padding-top: 20px;
+      max-width: 1320px; margin: 0 auto; padding-left: 20px; padding-right: 20px;
+      font-size: .76rem; color: #6a6a80; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .layout { grid-template-columns: 160px minmax(0,1fr); }
+      .col-right { display: none; }
+    }
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { max-width: 520px; }
+      .layout { grid-template-columns: 1fr; }
+      .col-left { position: static; }
+      .channel-list { display: flex; flex-wrap: wrap; gap: 4px; }
+      .channel-list li { margin-bottom: 0; }
+      .side-card.rank-side { display: block; }
+      .foot-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 740px) {
+      .head-inner { flex-wrap: wrap; gap: 10px; }
+      .head-nav { margin-left: 0; width: 100%; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero { padding: 34px 0 30px; }
+      .layout { padding-top: 26px; }
+      .article { padding: 20px 18px; }
+      .compare { grid-template-columns: 1fr; }
+      .compare > div:first-child { border-right: 0; border-bottom: 1px solid var(--border); }
+      .update-list li { grid-template-columns: 1fr; gap: 4px; }
+      .news-list li { grid-template-columns: 1fr; }
+      .news-list img { width: 100%; height: 130px; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      :root { --sticky-h: 130px; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce" role="status">
+    <strong>本周新增 12 条分级条目</strong> · 深夜片单「午夜档案」第 4 期已上线 · 11 月 25 日 09:00 更新
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-head">
+    <div class="head-inner">
+      <a class="brand" href="#top" aria-label="18+网页 首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="8.5"/>
+            <path d="M8 12h8M12 8v8"/>
+          </svg>
+        </span>
+        <span class="brand-text">18+<span>网页</span></span>
+      </a>
+      <nav class="head-nav" aria-label="主导航">
+        <a href="#overview">领域概览</a>
+        <a href="#featured">精选片单</a>
+        <a href="#updates">最新更新</a>
+        <a href="#categories">分类</a>
+        <a href="#deep">深度解析</a>
+        <a href="#guide">观看策略</a>
+        <a href="#faq">常见问答</a>
+        <a class="head-cta" href="#featured">进入片库</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-eyebrow">ADULT CONTENT INDEX · 2026</span>
+        <h1>18+<em>网页</em></h1>
+        <p class="hero-desc">
+          面向成年观众的成人向视频分级导航站：按类型、时长、题材与分级标签整理深夜片单、独立短片与长篇剧情向内容，提供观看顺序建议、条目对比与社区讨论焦点。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#featured">浏览精选片单</a>
+          <a class="btn btn-ghost" href="#guide">查看观看策略</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1,240+</strong>已收录条目</div>
+          <div><strong>38</strong>类型标签</div>
+          <div><strong>11/25</strong>当日更新</div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 340" role="img" aria-label="成人向视频条目索引示意图形">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e63946" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#8a1220" stop-opacity=".95"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#e8b04b" stop-opacity=".8"/>
+              <stop offset="1" stop-color="#e63946" stop-opacity=".3"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="340" fill="#14141c"/>
+          <circle cx="320" cy="60" r="90" fill="url(#g1)" opacity=".35"/>
+          <circle cx="80" cy="290" r="110" fill="url(#g2)" opacity=".22"/>
+          <g stroke="#2a2a3a" stroke-width="1">
+            <line x1="0" y1="85" x2="400" y2="85"/>
+            <line x1="0" y1="170" x2="400" y2="170"/>
+            <line x1="0" y1="255" x2="400" y2="255"/>
+            <line x1="80" y1="0" x2="80" y2="340"/>
+            <line x1="160" y1="0" x2="160" y2="340"/>
+            <line x1="240" y1="0" x2="240" y2="340"/>
+            <line x1="320" y1="0" x2="320" y2="340"/>
+          </g>
+          <g>
+            <rect x="24" y="24" width="120" height="70" rx="8" fill="#1c1c28" stroke="#3a3a50"/>
+            <rect x="34" y="36" width="60" height="8" rx="4" fill="#e63946"/>
+            <rect x="34" y="52" width="90" height="6" rx="3" fill="#4a4a68"/>
+            <rect x="34" y="66" width="72" height="6" rx="3" fill="#4a4a68"/>
+          </g>
+          <g>
+            <rect x="168" y="24" width="100" height="70" rx="8" fill="#1c1c28" stroke="#3a3a50"/>
+            <circle cx="192" cy="50" r="13" fill="none" stroke="#e8b04b" stroke-width="2.5"/>
+            <path d="M188 50 l3 3 6-6" stroke="#e8b04b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="212" y="42" width="42" height="6" rx="3" fill="#4a4a68"/>
+            <rect x="212" y="56" width="30" height="6" rx="3" fill="#4a4a68"/>
+          </g>
+          <g>
+            <rect x="24" y="120" width="150" height="110" rx="10" fill="#1c1c28" stroke="#e63946" stroke-width="1.5"/>
+            <rect x="38" y="136" width="80" height="9" rx="4" fill="#e63946"/>
+            <rect x="38" y="154" width="110" height="6" rx="3" fill="#4a4a68"/>
+            <rect x="38" y="168" width="96" height="6" rx="3" fill="#4a4a68"/>
+            <rect x="38" y="182" width="120" height="6" rx="3" fill="#4a4a68"/>
+            <rect x="38" y="200" width="46" height="14" rx="7" fill="#8a1220"/>
+            <rect x="92" y="200" width="46" height="14" rx="7" fill="#2a2a3a"/>
+          </g>
+          <g>
+            <rect x="196" y="120" width="180" height="52" rx="8" fill="#1c1c28" stroke="#3a3a50"/>
+            <circle cx="218" cy="146" r="14" fill="url(#g1)"/>
+            <rect x="242" y="134" width="90" height="8" rx="4" fill="#4a4a68"/>
+            <rect x="242" y="150" width="64" height="6" rx="3" fill="#3a3a50"/>
+          </g>
+          <g>
+            <rect x="196" y="186" width="180" height="44" rx="8" fill="#1c1c28" stroke="#3a3a50"/>
+            <rect x="210" y="200" width="60" height="7" rx="3" fill="#e8b04b"/>
+            <rect x="210" y="214" width="130" height="5" rx="2.5" fill="#4a4a68"/>
+          </g>
+          <g>
+            <rect x="24" y="258" width="352" height="58" rx="10" fill="#1c1c28" stroke="#3a3a50"/>
+            <rect x="40" y="276" width="70" height="22" rx="6" fill="#e63946"/>
+            <rect x="120" y="276" width="70" height="22" rx="6" fill="#2a2a3a"/>
+            <rect x="200" y="276" width="70" height="22" rx="6" fill="#2a2a3a"/>
+            <rect x="280" y="276" width="70" height="22" rx="6" fill="#2a2a3a"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区：三栏门户 -->
+  <div class="layout">
+
+    <!-- 左栏频道索引 -->
+    <aside class="col-left" aria-label="频道索引">
+      <p class="side-title">频道索引</p>
+      <ul class="channel-list">
+        <li><a href="#featured"><span class="dot"></span>精选片单</a></li>
+        <li><a href="#updates"><span class="dot gold"></span>最新更新</a></li>
+        <li><a href="#categories"><span class="dot"></span>题材分类</a></li>
+        <li><a href="#deep"><span class="dot muted"></span>深度解析</a></li>
+        <li><a href="#guide"><span class="dot"></span>观看策略</a></li>
+        <li><a href="#comments"><span class="dot gold"></span>用户评论</a></li>
+        <li><a href="#news"><span class="dot"></span>相关资讯</a></li>
+        <li><a href="#timeline"><span class="dot muted"></span>条目时间线</a></li>
+        <li><a href="#related"><span class="dot"></span>延伸方向</a></li>
+        <li><a href="#faq"><span class="dot gold"></span>常见问答</a></li>
+      </ul>
+
+      <div class="side-card">
+        <h3>分级提示</h3>
+        <p>本站仅面向 18 岁以上成年观众。所有条目均标注内容分级与题材标签，部分条目含强烈视觉刺激，请依据个人接受度选择。</p>
+      </div>
+      <div class="side-card">
+        <h3>本周编辑推荐</h3>
+        <p>《午夜档案 · 第四期》以伪纪录片形式重构都市夜行题材，11 月 23 日上线后进入热榜前三。</p>
+      </div>
+    </aside>
+
+    <!-- 中主内容 -->
+    <main>
+
+      <!-- 板块 1：主题领域概览 -->
+      <section class="panel overview" id="overview">
+        <div class="panel-head"><h2>成人向视频内容概览</h2></div>
+        <p>成人向视频并非单一类型，而是按叙事方式、拍摄尺度与观众期待分化为多个方向。当前集中消费的几类包括：以虚构剧情推进的长篇剧情片、以真实记录视角呈现的伪纪录片、时长 5—15 分钟的独立短片、以及围绕特定题材展开的系列剧集。不同类型的更新节奏、观看门槛与判断标准差异明显，直接按“热门”排序容易选到与预期不符的内容。</p>
+        <p>从题材看，都市夜行、心理悬疑、关系观察与实验影像构成当前讨论度较高的四条主线。都市夜行类偏向氛围与场景调度，适合在深夜连续观看；心理悬疑类依赖叙事反转，单条时长较长；关系观察类强调角色互动，对白密度高；实验影像类则常以非线剪辑与视觉风格取胜，接受度因人而异。</p>
+        <p>分级标签是筛选的第一道关卡。常见标注包括“剧情向”“纪录感”“强视觉”“对话密集”“开放结局”等，标签越具体，越能降低误选概率。对初次接触的观众，建议先按标签缩小范围，再结合单条时长决定是否投入整段时间。</p>
+        <div class="callout">当前值得关注的具体内容：11 月 20 日上线的《暗巷观察笔记》完整版、11 月 22 日更新的《夜班公寓》第 6 集，以及 11 月 24 日解禁的《静默房间》导演剪辑版。</div>
+      </section>
+
+      <!-- 板块 2：精选内容推荐 -->
+      <section class="panel" id="featured">
+        <div class="panel-head">
+          <h2>精选片单推荐</h2>
+          <span class="more">共 9 条 · 按编辑权重排序</span>
+        </div>
+        <p class="panel-lead">以下条目覆盖剧情向、纪录感与实验影像三类方向，附类型标签与具体看点，便于按接受度取舍。</p>
+
+        <div class="filter-bar">
+          <input type="search" id="searchInput" placeholder="搜索条目名称或标签，例如：夜班公寓 / 心理悬疑" aria-label="搜索精选条目">
+          <div class="filter-chips" id="filterChips" role="group" aria-label="按类型筛选">
+            <button class="chip active" data-filter="all">全部</button>
+            <button class="chip" data-filter="剧情向">剧情向</button>
+            <button class="chip" data-filter="纪录感">纪录感</button>
+            <button class="chip" data-filter="实验影像">实验影像</button>
+            <button class="chip" data-filter="心理悬疑">心理悬疑</button>
+          </div>
+        </div>
+
+        <div class="card-grid" id="cardGrid">
+          <article class="card" data-type="纪录感" data-tags="都市夜行 伪纪录片 强视觉">
+            <img src="https://picsum.photos/seed/night-archive04/400/300" alt="午夜档案第四期伪纪录片封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>午夜档案 · 第四期</h3>
+              <div class="tags"><span class="tag hot">纪录感</span><span class="tag">都市夜行</span><span class="tag">伪纪录片</span></div>
+              <p>以跟拍视角记录城市凌晨三点的不同街区，重点在环境声与人物状态的还原，适合喜欢慢节奏观察的观众。</p>
+              <div class="card-meta"><span>11-23 上线</span><span class="score">热度 94</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="剧情向" data-tags="关系观察 对白密集 开放结局">
+            <img src="https://picsum.photos/seed/night-shift06/400/300" alt="夜班公寓第六集剧照封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>夜班公寓 · 第 6 集</h3>
+              <div class="tags"><span class="tag hot">剧情向</span><span class="tag">关系观察</span><span class="tag">对白密集</span></div>
+              <p>围绕同一栋公寓里三组住户的夜间互动展开，本集重心转向角色间的信息差，结尾留有明显伏笔。</p>
+              <div class="card-meta"><span>11-22 更新</span><span class="score">评分 8.4</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="心理悬疑" data-tags="心理悬疑 叙事反转 长时长">
+            <img src="https://picsum.photos/seed/silent-room-dc/400/300" alt="静默房间导演剪辑版封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>静默房间 · 导演剪辑版</h3>
+              <div class="tags"><span class="tag">心理悬疑</span><span class="tag">叙事反转</span><span class="tag">长时长</span></div>
+              <p>较公映版增加约 22 分钟室内戏，强化了主角的心理动机铺垫，适合已看过原版、想补全细节的观众。</p>
+              <div class="card-meta"><span>11-24 解禁</span><span class="score">评分 8.9</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="纪录感" data-tags="都市夜行 街头观察 短时长">
+            <img src="https://picsum.photos/seed/alley-notes/400/300" alt="暗巷观察笔记完整版封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>暗巷观察笔记 · 完整版</h3>
+              <div class="tags"><span class="tag">纪录感</span><span class="tag">街头观察</span><span class="tag">短时长</span></div>
+              <p>由三段 8 分钟左右的街头影像拼接而成，没有旁白，完全依靠画面与同期声推进，适合当作氛围背景观看。</p>
+              <div class="card-meta"><span>11-20 上线</span><span class="score">热度 87</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="实验影像" data-tags="实验影像 非线剪辑 视觉风格">
+            <img src="https://picsum.photos/seed/echo-loop/400/300" alt="回声循环实验短片封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>回声循环</h3>
+              <div class="tags"><span class="tag">实验影像</span><span class="tag">非线剪辑</span><span class="tag">视觉风格</span></div>
+              <p>同一段画面被反复重组，音轨逐层叠加。看点在剪辑逻辑而非叙事，对实验影像接受度低者需谨慎选择。</p>
+              <div class="card-meta"><span>11-18 上线</span><span class="score">热度 72</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="剧情向" data-tags="关系观察 三角结构 细腻表演">
+            <img src="https://picsum.photos/seed/three-window/400/300" alt="三扇窗剧情片封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>三扇窗</h3>
+              <div class="tags"><span class="tag">剧情向</span><span class="tag">关系观察</span><span class="tag">细腻表演</span></div>
+              <p>以三个房间为空间支点，讲述彼此交叉却互不知情的关系。表演克制，情绪依靠停顿与视线传递。</p>
+              <div class="card-meta"><span>11-16 上线</span><span class="score">评分 8.2</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="心理悬疑" data-tags="心理悬疑 单场景 高压叙事">
+            <img src="https://picsum.photos/seed/closed-door/400/300" alt="关门之后单场景悬疑封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>关门之后</h3>
+              <div class="tags"><span class="tag">心理悬疑</span><span class="tag">单场景</span><span class="tag">高压叙事</span></div>
+              <p>全片发生在一个房间内，靠对话与声音设计制造压迫感。适合喜欢密室结构与心理博弈的观众。</p>
+              <div class="card-meta"><span>11-14 上线</span><span class="score">评分 8.6</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="实验影像" data-tags="实验影像 视觉拼贴 无对白">
+            <img src="https://picsum.photos/seed/color-noise/400/300" alt="色彩噪点视觉拼贴封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>色彩噪点</h3>
+              <div class="tags"><span class="tag">实验影像</span><span class="tag">视觉拼贴</span><span class="tag">无对白</span></div>
+              <p>全片无对白，由城市霓虹与室内光影的拼贴构成。节奏偏慢，更适合对画面质感有偏好的观众。</p>
+              <div class="card-meta"><span>11-11 上线</span><span class="score">热度 68</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-type="纪录感" data-tags="都市夜行 声音设计 长镜头">
+            <img src="https://picsum.photos/seed/last-train/400/300" alt="末班车之后声音设计封面" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <h3>末班车之后</h3>
+              <div class="tags"><span class="tag">纪录感</span><span class="tag">声音设计</span><span class="tag">长镜头</span></div>
+              <p>以末班车结束后的站台与街道为对象，使用多个长镜头记录空间由喧闹转向安静的过程，声音层次是最大看点。</p>
+              <div class="card-meta"><span>11-09 上线</span><span class="score">热度 81</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="empty-msg" id="emptyMsg">没有匹配的条目。请尝试其他名称或清除筛选条件。</p>
+      </section>
+
+      <!-- 板块 3：最新更新 / 动态 -->
+      <section class="panel" id="updates">
+        <div class="panel-head"><h2>最新更新与动态</h2><span class="more">截至 11 月 25 日 09:30</span></div>
+        <ul class="update-list">
+          <li><span class="time">今天 09:00</span><span><strong>午夜档案 · 第五期预告上线</strong>，正片定档 11 月 28 日，本期主题为“凌晨四点的便利店”。</span></li>
+          <li><span class="time">今天 08:20</span><span><strong>静默房间导演剪辑版</strong>补充字幕轨已修复，此前部分设备出现时间轴偏移。</span></li>
+          <li><span class="time">昨天 21:10</span><span><strong>夜班公寓第 6 集</strong>评论区讨论量突破 1,200 条，主要围绕结尾伏笔展开。</span></li>
+          <li><span class="time">昨天 18:40</span><span><strong>暗巷观察笔记完整版</strong>新增“拍摄手记”文字附录，说明三段影像的拍摄顺序。</span></li>
+          <li><span class="time">11-24 16:30</span><span><strong>回声循环</strong>上线 4K 修复版本，原版保留在条目内可切换。</span></li>
+          <li><span class="time">11-23 20:00</span><span><strong>午夜档案 · 第四期</strong>直播对谈回放上线，主创聊了 40 分钟关于环境声采集的方法。</span></li>
+          <li><span class="time">11-22 14:10</span><span><strong>三扇窗</strong>新增英文字幕，方便非中文观众理解对白中的停顿与语气。</span></li>
+          <li><span class="time">11-21 11:25</span><span><strong>关门之后</strong>进入本周热榜第 2 位，单场景结构成为社区讨论焦点。</span></li>
+          <li><span class="time">11-20 09:50</span><span><strong>暗巷观察笔记完整版</strong>正式上线，首日播放完成率 63%。</span></li>
+          <li><span class="time">11-18 19:30</span><span><strong>色彩噪点</strong>作者发布创作说明，解释拼贴素材的选取标准。</span></li>
+        </ul>
+      </section>
+
+      <!-- 板块 4：分类入口 -->
+      <section class="panel" id="categories">
+        <div class="panel-head"><h2>按题材分类</h2><span class="more">点击进入对应分类页面</span></div>
+        <div class="cat-grid">
+          <a class="cat-item" href="#featured">都市夜行<span>夜间城市观察与街头纪实</span></a>
+          <a class="cat-item" href="#featured">心理悬疑<span>反转叙事与高压对话场</span></a>
+          <a class="cat-item" href="#featured">关系观察<span>多角色互动与情绪细节</span></a>
+          <a class="cat-item" href="#featured">实验影像<span>非线剪辑与视觉拼贴</span></a>
+          <a class="cat-item" href="#featured">伪纪录片<span>跟拍视角与真实感营造</span></a>
+          <a class="cat-item" href="#featured">单场景<span>密室结构与声音设计</span></a>
+          <a class="cat-item" href="#featured">独立短片<span>5—15 分钟短篇合集</span></a>
+          <a class="cat-item" href="#featured">系列剧集<span>多集连载与长期追更</span></a>
+        </div>
+      </section>
+
+      <!-- 板块 5：深度解析正文 -->
+      <section class="panel article" id="deep">
+        <h2>深度解析：成人向视频的类型差异与判断维度</h2>
+        <p>在成人向视频领域，类型标签通常比“热门程度”更能决定观看体验。一个被标为 90 热度的条目，如果其核心卖点恰好是你不接受的尺度或节奏，实际体验可能远低于预期。因此理解类型之间的结构差异，比追逐榜单更有效。</p>
+
+        <h3>都市夜行与心理悬疑的根本区别</h3>
+        <p>都市夜行类以空间和氛围为核心，叙事往往松散，重点在于环境声、光线与人物在空间中的状态。心理悬疑类则依赖信息控制，观众的注意力被引导到对话细节与行为异常上，结尾通常需要重新回顾前文。两者对观众的要求不同：前者需要放松与耐心，后者需要主动观察与推理。</p>
+        <div class="compare">
+          <div>
+            <h4>都市夜行</h4>
+            <p>叙事松散，空间与声音为主，适合连续观看，单条时长通常 10—25 分钟，情绪基调偏沉静。</p>
+          </div>
+          <div>
+            <h4>心理悬疑</h4>
+            <p>信息密度高，依赖反转与伏笔，适合专注观看，单条时长通常 40 分钟以上，情绪基调偏紧绷。</p>
+          </div>
+        </div>
+
+        <h3>判断一个条目是否值得投入时间的具体维度</h3>
+        <ul>
+          <li><strong>单条时长与观看场景</strong>：10 分钟以内的短片适合碎片时间，40 分钟以上的长片需要完整时段，否则会打断叙事节奏。</li>
+          <li><strong>标签与实际内容的一致性</strong>：标注“对白密集”的条目若实际以环境声为主，说明标签存在偏差，优先参考评论区前三条具体描述。</li>
+          <li><strong>系列剧集的连续性要求</strong>：部分系列从第 3 集开始才进入主线，跳看容易丢失人物关系，追更前应确认单集是否独立成篇。</li>
+          <li><strong>版本差异</strong>：导演剪辑版、修复版与公映版在时长和画幅上可能有明显区别，同一作品不同版本应分别判断。</li>
+        </ul>
+
+        <h3>实验影像的接受度问题</h3>
+        <p>实验影像类条目通常不以故事性取胜，而是通过剪辑结构、色彩或声音制造体验。以《回声循环》为例，同一段画面被反复重组，观众需要主动寻找每次重复之间的差异。这类内容的评价两极分化明显，社区评论中“看不懂”与“非常享受”往往同时出现。对初次接触的观众，建议先从有明确叙事线索的实验短片入手，再尝试完全无对白的拼贴类作品。</p>
+
+        <h3>分级标签如何影响筛选效率</h3>
+        <p>分级标签的价值在于快速排除。若你对强视觉刺激敏感，可直接过滤掉标注“强视觉”的条目；若你不喜欢开放式结尾，标注“开放结局”的作品可暂时搁置。标签越细，筛选效率越高。当前站内使用的主要标签包括“强视觉”“对白密集”“长镜头”“单场景”“开放结局”“非线剪辑”等，每个标签都对应可预期的观看体验。</p>
+      </section>
+
+      <!-- 板块 6：体验指南 / 消费路径 -->
+      <section class="panel" id="guide">
+        <div class="panel-head"><h2>观看顺序与选择路径</h2></div>
+        <p class="panel-lead">以下路径按接受度由低到高排列，适合第一次系统接触成人向视频的观众。</p>
+        <ol class="steps">
+          <li><strong>先看短时长纪录感条目</strong>《暗巷观察笔记 · 完整版》单段 8 分钟，无对白，节奏温和，适合测试自己对氛围类内容的接受度。</li>
+          <li><strong>再看剧情向单集</strong>《夜班公寓 · 第 6 集》对白密集但结构清晰，能帮助判断是否适应多角色互动与伏笔式叙事。</li>
+          <li><strong>尝试心理悬疑长片</strong>《关门之后》单场景结构，信息集中，适合检验自己是否愿意投入 40 分钟以上专注观看。</li>
+          <li><strong>最后进入实验影像</strong>《回声循环》《色彩噪点》等条目节奏与叙事方式差异较大，建议在建立个人偏好后再尝试。</li>
+        </ol>
+        <p>比较类似条目时，优先看单条时长与标签一致性，再看评论区对节奏的具体描述。例如同为都市夜行类，《午夜档案》偏跟拍观察，《末班车之后》偏长镜头与声音层次，两者的观看场景并不相同。</p>
+      </section>
+
+      <!-- 板块 7：FAQ -->
+      <section class="panel faq" id="faq">
+        <div class="panel-head"><h2>常见问答</h2></div>
+
+        <details>
+          <summary>都市夜行类内容一般多久更新一次？</summary>
+          <div class="faq-body">多数系列为双周或月更，单集时长 10—25 分钟。以《午夜档案》为例，第四期与第五期之间间隔约三周。更新频率通常在条目页顶部标注，追更前可先确认周期。</div>
+        </details>
+        <details>
+          <summary>心理悬疑和关系观察有什么区别？</summary>
+          <div class="faq-body">心理悬疑依赖信息控制与反转结构，观众需要主动推理；关系观察侧重角色之间的互动细节与情绪变化，叙事相对平缓。前者对专注度要求更高，后者更适合连续观看。</div>
+        </details>
+        <details>
+          <summary>第一次接触从哪个条目开始看比较好？</summary>
+          <div class="faq-body">建议从《暗巷观察笔记 · 完整版》或《夜班公寓 · 第 6 集》开始。前者时长短、无对白，后者结构清晰、对白密度适中，两者都能较温和地呈现类型特征。</div>
+        </details>
+        <details>
+          <summary>实验影像类有没有统一的评判标准？</summary>
+          <div class="faq-body">没有统一标准。常见判断维度包括剪辑逻辑是否自洽、声音与画面的配合关系、重复段落的差异设计是否有效。由于接受度差异大，建议参考评论中关于具体段落的描述，而非只看总分。</div>
+        </details>
+        <details>
+          <summary>导演剪辑版和公映版差别大吗？</summary>
+          <div class="faq-body">差异因作品而异。《静默房间》导演剪辑版比公映版多约 22 分钟室内戏，主要补充心理动机铺垫；部分作品则仅调整画幅与调色。选择前建议查看条目内的版本说明。</div>
+        </details>
+        <details>
+          <summary>开放结局的条目适合哪些观众？</summary>
+          <div class="faq-body">开放结局适合愿意自行解读、不要求明确收束的观众。若你更看重叙事完整性，可优先选择标注“结构闭合”的条目，或参考评论区对结尾的具体讨论再决定。</div>
+        </details>
+      </section>
+
+      <!-- 板块 8：用户评论 -->
+      <section class="panel" id="comments">
+        <div class="panel-head"><h2>用户评论</h2><span class="more">近期 14 条</span></div>
+        <div class="comments">
+          <div class="comment"><div class="who"><span class="avatar">夜</span>夜行观察者</div><p>《午夜档案》第四期的环境声做得非常细，便利店那段几乎没有配乐，全靠冰柜嗡鸣，比加背景音乐更有代入感。</p><div class="on">评《午夜档案 · 第四期》 · 11-24</div></div>
+          <div class="comment"><div class="who"><span class="avatar">阿</span>阿岚</div><p>《夜班公寓》第 6 集结尾那个伏笔太明显了，感觉第 7 集会直接拆穿，等更新。</p><div class="on">评《夜班公寓 · 第 6 集》 · 11-24</div></div>
+          <div class="comment"><div class="who"><span class="avatar">静</span>静默听众</div><p>导演剪辑版多出来的室内戏确实让动机合理了不少，但节奏也慢了，看个人取舍。</p><div class="on">评《静默房间 · 导演剪辑版》 · 11-24</div></div>
+          <div class="comment"><div class="who"><span class="avatar">末</span>末班乘客</div><p>《末班车之后》的长镜头有点太长了，中间差点睡着，不过声音确实好。</p><div class="on">评《末班车之后》 · 11-23</div></div>
+          <div class="comment"><div class="who"><span class="avatar">三</span>三窗之外</div><p>《三扇窗》的表演很克制，三个人几乎没有大声说话，但信息量很大，值得二刷。</p><div class="on">评《三扇窗》 · 11-23</div></div>
+          <div class="comment"><div class="who"><span class="avatar">关</span>关门读者</div><p>《关门之后》单场景能做到这个程度不容易，但结尾反转稍微有点好猜。</p><div class="on">评《关门之后》 · 11-22</div></div>
+          <div class="comment"><div class="who"><span class="avatar">回</span>回声收集者</div><p>《回声循环》第二次看才注意到重复段落的色温有细微变化，这个设计挺妙的。</p><div class="on">评《回声循环》 · 11-22</div></div>
+          <div class="comment"><div class="who"><span class="avatar">色</span>色彩噪点</div><p>《色彩噪点》节奏太慢，我分两次才看完，画面是好看的，但确实考验耐心。</p><div class="on">评《色彩噪点》 · 11-21</div></div>
+          <div class="comment"><div class="who"><span class="avatar">暗</span>暗巷笔记</div><p>《暗巷观察笔记》完整版的拍摄手记比正片还有意思，讲了三段素材的拍摄顺序，建议看完正片再读。</p><div class="on">评《暗巷观察笔记 · 完整版》 · 11-21</div></div>
+          <div class="comment"><div class="who"><span class="avatar">半</span>半页纸</div><p>这个分类筛选用起来挺顺的，按“单场景”过滤之后找到好几条之前没注意的。</p><div class="on">关于分类筛选 · 11-20</div></div>
+          <div class="comment"><div class="who"><span class="avatar">深</span>深夜补番</div><p>建议把“对白密集”和“长镜头”两个标签分得更清楚一点，有些条目两个都标，不太好判断。</p><div class="on">关于标签体系 · 11-20</div></div>
+          <div class="comment"><div class="who"><span class="avatar">慢</span>慢速播放</div><p>《午夜档案》第三期比第四期更沉，第四期加入便利店场景后节奏快了一点，各有好处。</p><div class="on">评《午夜档案 · 第四期》 · 11-19</div></div>
+          <div class="comment"><div class="who"><span class="avatar">单</span>单集观众</div><p>《夜班公寓》前几集有点散，第 6 集才把人物关系收拢，建议从第 4 集开始看。</p><div class="on">评《夜班公寓 · 第 6 集》 · 11-19</div></div>
+          <div class="comment"><div class="who"><span class="avatar">镜</span>镜头之外</div><p>实验影像类的条目介绍如果能再多写一点具体段落，会比现在好判断。</p><div class="on">关于实验影像分类 · 11-18</div></div>
+        </div>
+      </section>
+
+      <!-- 板块 9：相关资讯 -->
+      <section class="panel" id="news">
+        <div class="panel-head"><h2>相关资讯</h2></div>
+        <ul class="news-list">
+          <li>
+            <img src="https://picsum.photos/seed/news-midnight05/600/400" alt="午夜档案第五期定档资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《午夜档案》第五期定档 11 月 28 日</h4><span class="date">11-25</span><p>本期主题为“凌晨四点的便利店”，官方放出 40 秒预告，环境声采集地点增至三处。</p></div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/news-silentfix/600/400" alt="静默房间字幕修复资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《静默房间》导演剪辑版修复字幕时间轴</h4><span class="date">11-25</span><p>此前部分设备出现字幕偏移，本次修复覆盖全部已上线平台，版本号同步更新。</p></div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/news-nightshift/600/400" alt="夜班公寓评论区讨论资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《夜班公寓》第 6 集评论区讨论量破 1,200 条</h4><span class="date">11-24</span><p>讨论集中在结尾伏笔与第 7 集走向，部分观众整理了人物关系图。</p></div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/news-alley/600/400" alt="暗巷观察笔记附录上线资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《暗巷观察笔记》新增“拍摄手记”附录</h4><span class="date">11-23</span><p>附录说明三段影像的拍摄顺序与素材取舍，正片内容未改动。</p></div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/news-echo4k/600/400" alt="回声循环4K修复上线资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《回声循环》4K 修复版上线</h4><span class="date">11-22</span><p>原版保留可切换，修复版主要改善暗部细节与噪点控制。</p></div>
+          </li>
+          <li>
+            <img src="https://picsum.photos/seed/news-closedoor/600/400" alt="关门之后热榜第二资讯配图" width="600" height="400" loading="lazy">
+            <div><h4>《关门之后》进入本周热榜第 2 位</h4><span class="date">11-21</span><p>单场景结构引发讨论，社区出现多篇关于声音设计的分析帖。</p></div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 板块 10：相关推荐 -->
+      <section class="panel" id="related">
+        <div class="panel-head"><h2>延伸方向</h2><span class="more">按内容方向索引</span></div>
+        <div class="tag-cloud">
+          <a href="#featured">伪纪录片跟拍手法</a>
+          <a href="#featured">夜间城市声音采集</a>
+          <a href="#featured">单场景对话调度</a>
+          <a href="#featured">非线剪辑结构</a>
+          <a href="#featured">系列剧集人物关系图</a>
+          <a href="#featured">导演剪辑版对比</a>
+          <a href="#featured">开放结局解读方法</a>
+          <a href="#featured">独立短片合集</a>
+        </div>
+      </section>
+
+      <!-- 板块 11：补充板块：条目时间线 -->
+      <section class="panel" id="timeline">
+        <div class="panel-head"><h2>近期条目时间线</h2></div>
+        <ul class="timeline">
+          <li><span class="t-date">11-25</span> 《午夜档案》第五期预告上线，定档 11 月 28 日。</li>
+          <li><span class="t-date">11-24</span> 《静默房间》导演剪辑版字幕修复完成。</li>
+          <li><span class="t-date">11-23</span> 《夜班公寓》第 6 集评论区讨论量突破 1,200 条。</li>
+          <li><span class="t-date">11-22</span> 《回声循环》4K 修复版上线，原版保留。</li>
+          <li><span class="t-date">11-21</span> 《关门之后》进入本周热榜第 2 位。</li>
+          <li><span class="t-date">11-20</span> 《暗巷观察笔记》完整版正式上线。</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- 右栏辅助 -->
+    <aside class="col-right" aria-label="辅助信息">
+      <div class="side-card">
+        <h3>本周热榜</h3>
+        <ol class="rank-list">
+          <li><a href="#featured">午夜档案 · 第四期</a><span class="meta">热度 94 · 纪录感</span></li>
+          <li><a href="#featured">关门之后</a><span class="meta">热度 91 · 心理悬疑</span></li>
+          <li><a href="#featured">静默房间 · 导演剪辑版</a><span class="meta">热度 89 · 心理悬疑</span></li>
+          <li><a href="#featured">夜班公寓 · 第 6 集</a><span class="meta">热度 86 · 剧情向</span></li>
+          <li><a href="#featured">暗巷观察笔记 · 完整版</a><span class="meta">热度 87 · 纪录感</span></li>
+        </ol>
+      </div>
+
+      <div class="side-card rank-side">
+        <h3>更新日历</h3>
+        <p>11 月 25 日 · 2 条更新</p>
+        <p>11 月 26 日 · 预计 1 条</p>
+        <p>11 月 28 日 · 《午夜档案》第五期</p>
+      </div>
+
+      <div class="side-card">
+        <h3>分级标签说明</h3>
+        <p>强视觉 · 对白密集 · 长镜头 · 单场景 · 开放结局 · 非线剪辑。标签越具体，筛选越准。</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-foot">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="8.5"/>
+              <path d="M8 12h8M12 8v8"/>
+            </svg>
+          </span>
+          <span class="brand-text">18+<span>网页</span></span>
+        </div>
+        <p>面向成年观众的成人向视频分级导航与观看决策参考，覆盖深夜片单、类型对比与社区讨论焦点。</p>
+      </div>
+      <div>
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="#featured">精选片单</a></li>
+          <li><a href="#updates">最新更新</a></li>
+          <li><a href="#categories">题材分类</a></li>
+          <li><a href="#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>判断参考</h4>
+        <ul>
+          <li><a href="#guide">观看路径</a></li>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#comments">用户评论</a></li>
+          <li><a href="#timeline">条目时间线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据说明</h4>
+        <ul>
+          <li>条目热度与评分来自站内示例数据</li>
+          <li>更新日期截至 2026-11-25</li>
+          <li>内容仅面向 18 岁以上观众</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 18+网页 · 内容分级导航示例站</span>
+      <span>请确认已年满 18 周岁后再浏览相关内容</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var searchInput = document.getElementById('searchInput');
+      var chips = document.querySelectorAll('#filterChips .chip');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('#cardGrid .card'));
+      var emptyMsg = document.getElementById('emptyMsg');
+      var activeFilter = 'all';
+
+      function normalize(str) {
+        return (str || '').toLowerCase();
+      }
+
+      function applyFilter() {
+        var q = normalize(searchInput ? searchInput.value.trim() : '');
+        var visible = 0;
+
+        cards.forEach(function (card) {
+          var type = card.getAttribute('data-type') || '';
+          var tags = card.getAttribute('data-tags') || '';
+          var text = normalize(card.textContent + ' ' + tags + ' ' + type);
+
+          var matchType = activeFilter === 'all' || type === activeFilter;
+          var matchQuery = !q || text.indexOf(q) !== -1;
+
+          if (matchType && matchQuery) {
+            card.style.display = '';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (emptyMsg) {
+          emptyMsg.style.display = visible === 0 ? 'block' : 'none';
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilter);
+      }
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); });
+          chip.classList.add('active');
+          activeFilter = chip.getAttribute('data-filter') || 'all';
+          applyFilter();
+        });
+      });
+
+      applyFilter();
+    })();
+  </script>
+</body>
+                                       </html>
